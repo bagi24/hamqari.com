@@ -28,27 +28,6 @@ const Catalog = () => {
         className="flex w-full m-8 overflow-x-scroll border-gray-300 border-solid border-1 gap-x-1 "
       >
         <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
       </div>
     </div>
   );
