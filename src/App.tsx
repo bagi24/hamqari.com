@@ -1,10 +1,15 @@
 import React from "react";
+import Header from "./components/header/Header";
+import Title from "./components/title/Title";
+import Catalog from "./components/catalog/Catalog";
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline text-red-600">
-      Simple React Typescript Tailwind Sample
-    </h1>
+    <>
+      <Header />
+      <Title />
+      <Catalog />
+    </>
   );
 }
 
