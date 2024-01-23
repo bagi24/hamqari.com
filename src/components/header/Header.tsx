@@ -1,13 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="flex items-center justify-between w-full px-12 py-6 text-white bg-dark shadow-custom ">
       <nav className="container ">
         <ul className="flex font-sans text-base leading-6 cursor-pointer ">
-          <li className="px-4 py-3 hover:text-light">მთავარი</li>
+          <Link to="/">
+            {" "}
+            <li className="px-4 py-3 hover:text-light">მთავარი</li>
+          </Link>
+
           <li className="px-4 py-3 hover:text-light">ჰამქარი</li>
-          <li className="px-4 py-3 hover:text-light">ვაკანსია</li>
+
+          <Link to="/jober">
+            <li className="px-4 py-3 hover:text-light">ვაკანსია</li>
+          </Link>
+
           <li className="px-4 py-3 hover:text-light">პასუხები</li>
           <li className="px-4 py-3 hover:text-light ">ჩვენს შესახებ</li>
         </ul>

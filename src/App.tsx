@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./components/header/Header";
-import Title from "./components/title/Title";
-import Catalog from "./components/catalog/Catalog";
+import Home from "./pages/home/Home";
+import Vacancy from "./pages/vacancy/Vacancy";
 import { MyContext } from "./createContext/MyContext";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   interface TypeData {
@@ -100,9 +100,10 @@ function App() {
   return (
     <>
       <MyContext.Provider value={{ value: personData }}>
-        <Header />
-        <Title />
-        <Catalog />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/jober" element={<Vacancy />} />
+        </Routes>
       </MyContext.Provider>
     </>
   );
