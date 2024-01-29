@@ -3,6 +3,7 @@ import Home from "./pages/home/Home";
 import Vacancy from "./pages/vacancy/Vacancy";
 import { MyContext } from "./createContext/MyContext";
 import { Route, Routes } from "react-router-dom";
+import About from "./pages/about/About";
 
 function App() {
   interface TypeData {
@@ -95,6 +96,14 @@ function App() {
       imgSrc:
         "https://res.cloudinary.com/dhcvuhmzy/image/upload/v1701021589/ql3xn0bix50mfhzmfkii.jpg",
     },
+
+    {
+      id: 12,
+      firstname: "პატრისია მაისურაძე",
+      professions: "ოპერატორი",
+      imgSrc:
+        "https://res.cloudinary.com/dhcvuhmzy/image/upload/v1700253196/jpg_sg0ycx.jpg",
+    },
   ];
 
   return (
@@ -103,6 +112,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/jober" element={<Vacancy />} />
+          <Route path="/aboutUs" element={<About />} />
         </Routes>
       </MyContext.Provider>
     </>
