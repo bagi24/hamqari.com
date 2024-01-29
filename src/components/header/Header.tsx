@@ -4,8 +4,16 @@ import { Link } from "react-router-dom";
 import Login from "../login/Login";
 
 const Header = () => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [active, setActive] = useState(false);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [active, setActive] = useState<boolean>(false);
+
+  const openModal: () => void = () => {
+    setActive(true);
+  };
+
+  const closeModal: () => void = () => {
+    setActive(false);
+  };
 
   return (
     <div className="relative flex items-center justify-between w-full px-12 py-6 text-white bg-dark shadow-custom">
@@ -54,13 +62,13 @@ const Header = () => {
       </nav>
 
       <button
-        onClick={() => setActive(true)}
+        onClick={openModal}
         className="px-10 py-2 bg-white rounded-lg cursor-pointer text-light "
       >
         დარეგისტრირდი
       </button>
 
-      {active && <Login />}
+      {active && <Login closeModal={closeModal} />}
     </div>
   );
 };

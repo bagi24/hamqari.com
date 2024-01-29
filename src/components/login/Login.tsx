@@ -1,7 +1,11 @@
 import React from "react";
 import { useState } from "react";
 
-const Login = () => {
+interface LoginProps {
+  closeModal: () => void;
+}
+
+const Login: React.FC<LoginProps> = ({ closeModal }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -13,8 +17,12 @@ const Login = () => {
   return (
     <div className="absolute  flex items-center justify-center h-screen bg-gray-100 top-[-170px]  left-90 ">
       <form className="p-8 bg-white rounded shadow-md w-200">
-        <h2 className="mb-4 text-2xl font-semibold text-center text-dark">
+        <h2 className="flex justify-center gap-10 mb-4 text-2xl font-semibold text-center text-dark">
           გამარჯობა
+          <span onClick={closeModal} className="cursor-pointer text-pink">
+            {" "}
+            X
+          </span>
         </h2>
 
         <div className="mb-4">
