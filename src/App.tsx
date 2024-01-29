@@ -4,6 +4,9 @@ import Vacancy from "./pages/vacancy/Vacancy";
 import { MyContext } from "./createContext/MyContext";
 import { Route, Routes } from "react-router-dom";
 import About from "./pages/about/About";
+import Blog from "./pages/blog/Blog";
+import Questions from "./pages/question/Questions";
+import Hamqari from "./pages/hamqari/Hamqari";
 
 function App() {
   interface TypeData {
@@ -113,6 +116,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/jober" element={<Vacancy />} />
           <Route path="/aboutUs" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/questions" element={<Questions />} />
+          <Route path="/hamqari" element={<Hamqari />} />
         </Routes>
       </MyContext.Provider>
     </>
